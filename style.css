@@ -13,6 +13,7 @@ html {
     scroll-behavior: smooth;
     background: url('./img/hetag.jpeg') top center no-repeat fixed;
     background-size: cover;
+    transition: all 0.5s linear;
 }
 
 .body_wrapper {
@@ -22,16 +23,159 @@ html {
     flex-direction: column;
 }
 
+.burger_popup {
+    opacity: 0;
+    display: none;
+    transition: all 1s linear;
+}
+
+.burger_none {
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.burger_popup-active {
+    transition: all 0.5s linear;
+    z-index: 90;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: #ffffff;
+}
+
+.btn_wrapper {
+    position: relative;
+    width: 60px;
+    height: 50px;
+}
+
+.btn_wrapper span {
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    width: 60px;
+    background-color: #000;
+}
+
+.btn_wrapper span {
+    transform: rotate(-45deg);
+}
+
+.btn_wrapper .btn_close-popup2 {
+    transform: rotate(45deg);
+}
+
+.popup_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.popup_wrapper-linck {
+    transition: all 0.3s linear;
+    border-radius: 20px;
+    border: 3px #00000000 solid;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+    font-size: 15px;
+}
+
+.popup_wrapper-linck:hover {
+    color: #787575;
+    border: 3px #787575 solid;
+}
+
+.popup_wrapper-linck:active {
+    color: #787575;
+    border: 3px #787575 solid;
+}
+
+.popup_wrapper-item {
+    width: 100px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #000;
+    animation: merchModil 3s linear infinite;
+}
+
+.popup_wrapper-item:hover {
+    animation-play-state: paused;
+}
+.popup_wrapper-item:active {
+    animation-play-state: paused;
+}
+
+@keyframes merchModil {
+    0% {
+        transform: scale(1.0);
+        box-shadow: none;
+    }
+    50% {
+        transform: scale(1.06);
+        box-shadow: 0 0 5px 5px #000;
+    }
+    100% {
+        transform: scale(1.0);
+        box-shadow: none;
+    }
+}
+
+.wrapper_pop {
+    top: 30px;
+    right: 5%;
+    position: absolute;
+}
+
+.btn_close-popup {
+    content: "";
+}
+
 @media (max-width: 768px) {
-    .burger {
-        position: fixed;
+    .burder_wrapper span,
+    .burder_wrapper::before,
+    .burder_wrapper::after {
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 4px;
+        transition: all 0.3s ease 0s;
         background-color: #fff;
-        height: 60px;
+    }
+    .burder_wrapper::before,
+    .burder_wrapper::after {
+        content: "";
+    }
+    
+    .burder_wrapper::before {
+        top: 22px;
+    }
+    
+    .burder_wrapper::after {
+        top: 46px;
+    }
+    
+    .burder_wrapper {
+        position: relative;
+    }
+    
+    .burger {
+        transition: all 1s linear;
+        z-index: 5;
+        position: sticky;
+        cursor: pointer;
+        height: 50px;
         width: 60px;
         top: 30px;
-        right: 30px;
+        left: 87%;
     }
-
+    
     .header_wrapper {
         display: none;
     }  
@@ -39,6 +183,10 @@ html {
 
 .header_wrapper {
     background: none;
+}
+
+.header_merch {
+    height: 100px;
 }
 
 /* HEADER */
@@ -101,7 +249,7 @@ html {
 
 .about_my-team {
     transition: all 0.4s linear;
-
+    
     align-items: center;
     text-align: center;
     position: absolute;
@@ -124,12 +272,26 @@ html {
     color: #ff0000;
 }
 
+.about_mi {
+    transition: all 0.3s linear;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.my_team {
+    transition: all 0.3s linear;
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .about_mi:hover {
     cursor: pointer;
+    color: #ff0000;
 }
 
 .my_team:hover {
     cursor: pointer;
+    color: #ff0000;
 }
 
 .anonse {
@@ -148,6 +310,7 @@ html {
 }
 
 .anonse-list {
+    scroll-behavior: smooth;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -157,7 +320,6 @@ html {
     height: 40px;
     width: 100%;
     transition: all 0.3s linear 0s;
-    cursor: pointer;
 }
 
 .sociall {
@@ -186,6 +348,7 @@ html {
 }
 
 .navigation_sent {
+    scroll-behavior: smooth;
     padding-top: 3px;
     list-style-type: none;
     text-decoration: none;
@@ -195,6 +358,7 @@ html {
     border: 3px solid rgba(0, 0, 0, 0);
     border-radius: 30px;
     transition: all 0.3s linear 0s;
+    cursor: pointer;
 }
 
 .navigation_sent:hover {
@@ -289,6 +453,19 @@ html {
 }
 
 @media (max-width: 768px) {
+    .main_afisha-standUp:hover {
+        transform: none;
+        border: 2px solid rgba(0, 0, 0, 0);
+        transition: all 0.5s linear 0s;
+        box-shadow: 0px 0px 10px 2px #fff;
+    }
+    .main_afisha-standUp:active {
+        transform: none;
+        border: 2px solid rgba(0, 0, 0, 0);
+        transition: all 0.5s linear 0s;
+        box-shadow: 0px 0px 10px 2px #fff;
+    }
+
     .video_youtube {
         height: 400px;
     }
@@ -317,6 +494,24 @@ html {
 }
 
 @media (min-width: 768px) {
+    .burger_popup-active {
+        display: none;
+    }
+
+    .main_afisha-standUp:hover {
+        transform: scale(1.03);
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: all 0.5s linear 0s;
+        box-shadow: 0px 0px 10px 2px #fff;
+    }
+    
+    .main_afisha-standUp:active {
+        transform: scale(1.03);
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: all 0.5s linear 0s;
+        box-shadow: 0px 0px 10px 2px #fff;
+    }
+
     .video_youtube {
         height: 500px;
     }
@@ -365,22 +560,8 @@ html {
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
-    border: 3px solid #ffffffcd;
+    border: 2px solid #ffffffcd;
     transition: all 0.5s linear 0s;
-}
-
-.main_afisha-standUp:hover {
-    transform: scale(1.03);
-    border: 1px solid rgba(0, 0, 0, 0);
-    transition: all 0.5s linear 0s;
-    box-shadow: 0px 0px 10px 2px #fff;
-}
-
-.main_afisha-standUp:active {
-    transform: scale(1.03);
-    border: 1px solid rgba(0, 0, 0, 0);
-    transition: all 0.5s linear 0s;
-    box-shadow: 0px 0px 10px 2px #fff;
 }
 
 .afisha_wrapper {
@@ -483,7 +664,7 @@ html {
 
     .video {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 500px);
+        grid-template-rows: repeat(8, 500px);
     }
 }
 
@@ -496,6 +677,7 @@ html {
         grid-template-columns: repeat(2, minmax(500px, 1fr));
         grid-template-rows: repeat(3, 300px);
     }
+
 }
 
 .video { 
@@ -535,6 +717,7 @@ html {
     background: transparent;
     display: flex;
     flex-direction: column;
+    z-index: 500;
 }
 
 .footer_container {
@@ -591,11 +774,11 @@ html {
 
 .tel_number:hover {
     transition: all 0.3s linear 0s;
-    color: #787575;
+    color: #ff0000;
 }
 .tel_number:active {
     transition: all 0.3s linear 0s;
-    color: #787575;
+    color: #ff0000;
 }
 
 .connection {
@@ -849,7 +1032,7 @@ html {
     cursor: pointer;
 }
 .box .imgBx {
-    z-index: 2;
+    z-index: 8;
     position: absolute;
     top: 0;
     left: 0;
@@ -859,7 +1042,7 @@ html {
 }
 .content {
     position: absolute;
-    z-index: 1;
+    z-index: 7;
     width: 94%;
     height: 100%;
     justify-content: flex-end;
@@ -892,30 +1075,39 @@ html {
 
 /* MERCH */
 .body_merch {
-    max-width: 2000px;
-    min-height: 2000px;
     background: #fff;
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s linear;
 }
 
 .anonse-list_merch {
     margin: 0;
+    margin-top: 20px;
     transition: all 0.2s linear;
+    position: relative;
 }
 
 .navigation_sent-merch {
+    z-index: 100;
     border-radius: 50px;
     font-weight: 400;
-    width: 100%;
+    width: 300px;
     color: #000;
     list-style-type: none;
     text-decoration: none;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .navigation_sent-merch:hover {
     color: #ff0000;
-    border: 3px solid #ff0000;
     transition: all 0.2s linear;
+    border: 3px solid #ff0000;
 }
 
 .navigation_merch {
@@ -923,6 +1115,7 @@ html {
     width: 100%;
     text-decoration: none;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .anonse_merch {
@@ -958,21 +1151,41 @@ html {
     color: #787575;
 }
 
+@media (min-width: 2001px) {
+    .huga_run {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 2001px) {
+    .huga_run {
+        top: 23%;
+    }
+}
+@media (max-width: 1500px) {
+    .huga_run {
+        top: 10%;
+    }
+}
+
 .huga_run {
+    z-index: 51;
     position: fixed;
+    width: 100%;
+}
+
+.huga_run-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 20%;
-    left: 0;
-    width: 100%;
 }
 
-.worlds_huga {
-    animation: run 3s linear infinite;
-    animation-delay: calc(0.1s * var(--d));
 
+.worlds_huga {
+    animation: run 5s linear infinite;
+    animation-delay: calc(0.2s * var(--d));
     color: transparent;
     font-size: 100px;
     font-weight: 600;
@@ -985,10 +1198,18 @@ html {
         box-shadow: none;
         filter: blur(0.1px) hue-rotate(0deg);
     }
-    30%, 70% {
+    25% {
+        color: #ffffff;
+        filter: blur(0.1px) hue-rotate(0deg);
+        /* text-shadow: 0 0 5px #ff0000; */
+    }
+    50% {
         color: #ff0000;
         filter: blur(0.1px) hue-rotate(0deg);
-        text-shadow: 0 0 10px #ff0000;
+    }
+    75% {
+        color: #ffffff;
+        filter: blur(0.1px) hue-rotate(0deg);
     }
     100% {
         color: #ff0000;
@@ -997,8 +1218,250 @@ html {
     }
 }
 
+.worlds_huga2 {
+    font-size: 125px
+}
+.worlds_huga3 {
+    font-size: 150px
+}
+.worlds_huga4 {
+    font-size: 175px
+}
+
+
 .container_merch {
     box-sizing: border-box;
-    width: 400px;
     margin: 0 auto;
+}
+
+/* MERCH MAIN*/
+
+.main_merch {
+    position: relative;
+    z-index: 55;
+}
+
+.main_merch-wrapper {
+    width: 100%;
+}
+
+.merch_tavar-item {
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 2px #000;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    font-size: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+.merch_tavar-item:hover {
+    transition: all 0.4s linear;
+    transform: scale(1.06);
+    box-shadow: 0 0 5px 5px #000;
+}
+
+.merch_tavar-item:active {
+    transition: all 0.4s linear;
+    transform: scale(1.06);
+    box-shadow: 0 0 5px 5px #000;
+}
+@media (max-width: 1500px) {
+    .merch_cart {
+        grid-template-columns: repeat(3, minmax(300px, 500px));
+        grid-template-rows: repeat(2, 400px);
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 960px) {
+    .merch_cart {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-rows: repeat(3, 400px);
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .merch_cart {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        grid-template-rows: repeat(5, 400px);
+        column-gap: 30px;
+    }
+}
+@media (min-width: 1500px) {
+    .merch_cart {
+        grid-template-columns: repeat(4, minmax(400px, 1fr));
+        grid-template-rows: repeat(2, 500px);
+        column-gap: 120px;
+    }
+
+    .merch_tavar-item {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.merch_cart {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    row-gap: 50px;
+    justify-items: center;
+}
+
+.tavar_box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.merch_img{
+    border-radius: 20px 20px 0 0 ;
+    background-size: cover;
+}
+
+.tavar_wrapper{
+    background-color: #fff;
+
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+}
+
+.tavar_name{
+    margin: 0;
+}
+
+.tavar_price{
+    margin: 0;
+}
+
+/* MERCH FOOTER */
+
+.footer_merch {
+    margin-top: 120px;
+}
+
+
+/* MY TEAM */
+
+.body_myTeam {
+    background: #032dffaf;
+    min-height: 1000px;
+    transition: all 0.5s linear;
+}
+
+.navigation_sent_myTeam {
+    border: 3px solid #00000000;
+    transition: all 0.4s linear;
+    color: #fff;
+}
+
+.navigation_sent_myTeam:hover {
+    transition: all 0.4s linear;
+    border: 3px solid #787575;
+    color: #787575;
+}
+
+/* MY TEAM MAIN  */
+
+.mi_myTeam_wrapper {
+    padding: 0 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 1500px) {
+    .myTeam_item {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        grid-template-rows: repeat(3, 400px);
+    }
+}
+@media (max-width: 960px) {
+    .myTeam_item {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-rows: repeat(4, 400px);
+    }
+}
+@media (max-width: 425px) {
+    .myTeam_item {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        grid-template-rows: repeat(8, 400px);
+    }
+}
+@media (min-width: 1500px) {
+    .myTeam_item {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        grid-template-rows: repeat(2, 400px);
+    }
+}
+
+.myTeam_item {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 40px;
+}
+
+.myTeam_link {
+    border-radius: 20px;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s linear;
+}
+
+.myTeam_link:hover {
+    transition: all 0.4s linear;
+    box-shadow: 0 0 5px 5px #fff;
+    transform: scale(1.06);
+}
+
+.linkTeam_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.img_myTeam {
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+}
+
+.name_myTeam_wrap {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.name_team {
+    margin: 0;
+}
+
+.name_team_work {
+    margin: 0;
 }
