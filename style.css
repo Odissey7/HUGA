@@ -11,7 +11,7 @@ html {
     font-style: normal;
     font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     scroll-behavior: smooth;
-    background: url('./img/hetag2.jpeg') right top no-repeat fixed;
+    background: url('./hetag2.jpeg') right top no-repeat fixed;
     background-size: cover;
     transition: all 0.5s linear;
 }
@@ -696,6 +696,22 @@ html {
 
 .video_youtube {
     transition: all 0.5s linear 0s;
+}
+
+@media (max-width: 480px) {
+    .video_youtube:hover {
+        transition: all 0.5s linear 0s;
+        cursor: pointer;
+        box-shadow: none;
+        transform: scale(1);
+    
+    }
+    .video_youtube:active {
+        transition: all 0.5s linear 0s;
+        cursor: pointer;
+        box-shadow: none;
+        transform: scale(1);
+    }
 }
 
 .video_youtube:hover {
