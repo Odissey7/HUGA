@@ -460,9 +460,9 @@ html {
 }
 
 @media (max-width: 768px) {
-    .main_title {
-        /* color: #393737; */
-    }
+    /* .main_title {
+        color: #393737;
+    } */
 
     .body_image {
         background: url('../img/hetag2.jpeg') top center no-repeat fixed;
