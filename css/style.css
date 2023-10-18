@@ -564,6 +564,10 @@ html {
     margin: 0;
 }
 
+.standUp_start {
+    white-space: nowrap;
+}
+
 .pClass {
     margin: 0;
 }
