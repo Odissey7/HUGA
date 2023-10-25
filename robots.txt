@@ -1,1 +1,3 @@
-Allow: /
+User-agent: *
+Disallow: 
+Host: hugaev.com
