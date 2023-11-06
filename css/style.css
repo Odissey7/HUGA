@@ -11,14 +11,15 @@ html {
     font-style: normal;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif, Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    background-color: #c6c0c0;
+    background-color: #e2e2e2;
     transition: all 0.5s linear;
-}
-
-.body_image {
-    background: url('../img/hetag2.jpeg') center -100px no-repeat fixed;
+    background: url('../img/hetag2.jpeg') fixed center -100px no-repeat;
     background-size: cover;
 }
+
+/* .body_image {
+
+} */
 
 .body_wrapper {
     min-height: 100%;
@@ -187,6 +188,8 @@ html {
 }
 
 .header_wrapper {
+    padding: 0 30px;
+    padding-top: 30px;
     background: none;
 }
 
@@ -200,7 +203,6 @@ html {
     text-align: center;
     justify-content: space-around;
     display: flex;
-    padding: 20px 20px 0 20px;
     height: 60px;
     gap: 20px;
 }
@@ -380,7 +382,8 @@ html {
 .sociall_wrapper {
     margin: 0;
     padding: 0;
-    width: 200px;
+    min-width: 200px;
+    max-width: 250px;
     text-decoration: none;
     list-style-type: none;
     display: flex;
@@ -397,6 +400,7 @@ html {
 .afisha {
     text-decoration: none;
     text-transform: uppercase;
+    margin: 70px 0;
     color: #fff;
     font-size: 80px;
     display: flex;
@@ -405,9 +409,11 @@ html {
     justify-content: center;
     letter-spacing: 3px;
     user-select: none;
+    transition: all 0.3s linear;
 
     animation: afisha 2.5s infinite;
 }
+
 /* 
 @keyframes afisha {
     0% {
@@ -435,7 +441,7 @@ html {
 }
 
 .empty_show {
-    color: #fff;
+    color: #0040ff9a;
     font-size: 25px;
     margin: 0;
     text-align: center;
@@ -464,8 +470,8 @@ html {
         color: #393737;
     } */
 
-    .body_image {
-        background: url('../img/hetag2.jpeg') top center no-repeat fixed;
+    .body {
+        background: url('../img/hetag2.jpeg') 75% -100px no-repeat fixed;
     }
 
     .main_afisha-standUp:hover {
@@ -532,7 +538,7 @@ html {
     }
 
     .empty_show {
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
     .city_show-add {
@@ -541,7 +547,7 @@ html {
 
     .main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         justify-items: center;
         align-items: baseline;
     }
@@ -626,6 +632,11 @@ html {
     padding-bottom: 10px;
 }
 
+.standUp_place {
+    text-transform: uppercase;
+    max-width: 160px;
+}
+
 .buttun_tickets {
     box-sizing: border-box;
 }
@@ -637,8 +648,8 @@ html {
     box-sizing: border-box;
     text-transform: uppercase;
     font-size: 20px;
-    min-width: 130px;
-    min-height: 40px;
+    min-width: 150px;
+    min-height: 50px;
     max-width: 150px;
     max-height: 50px;
     padding: 0;
@@ -673,7 +684,7 @@ html {
 .video_title {
     margin: 0;
     margin-bottom: 70px;
-    color: #fff;
+    color: #005bfc80;
     font-size: 80px;
     text-transform: uppercase;
     text-align: center;
@@ -715,6 +726,7 @@ html {
 }
 
 .video_youtube {
+    border-radius: 50px;
     transition: all 0.5s linear 0s;
 }
 
@@ -773,15 +785,14 @@ html {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
-    color: #fff;
+    color: #005bfc80;
     font-size: 90px;
-    height: 75px;
     margin: 0;
     margin-top: 100px;
 }
 
 .question {
-    color: #ffffff;
+    color: #005bfc80;
     background: transparent;
     font-size: 30px;
     margin: 0;
@@ -806,7 +817,7 @@ html {
     font-size: 30px;
     text-decoration: none;
     list-style-type: none;
-    color: #ffffff;
+    color: #005bfc80;
     cursor: pointer;
     transition: all 0.3s linear 0s;
 }
@@ -822,11 +833,11 @@ html {
 
 @media (min-width: 768px) {
     .question {
-        color: #ff0000;
+        color: #005bfc80;
     }
 
     .tel_number {
-        color: #ff0000;
+        color: #005bfc80;
     }
 }
 .connection {
@@ -986,6 +997,10 @@ html {
 }
 
 @media (max-width: 425px) {
+    .img_sociall-ex {
+        border-radius: 60px;
+    }
+
     .content {
         display: none;
     }
@@ -1012,6 +1027,10 @@ html {
 }
 
 @media (min-width: 425px) {
+    .img_sociall-ex {
+        border-radius: 34px;
+    }
+
     .content {
         display: flex;
     }
@@ -1038,6 +1057,10 @@ html {
 }
 
 @media (min-width: 960px) {
+    .img_sociall-ex {
+        border-radius: 34px;
+    }
+
     .box:hover {
         height: 300px;
     }
@@ -1088,6 +1111,7 @@ html {
     height: 100%; 
     box-sizing: border-box;
 }
+
 .content {
     position: absolute;
     z-index: 7;
