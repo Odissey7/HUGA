@@ -3,6 +3,8 @@ html {
 }
 
 .body {
+    z-index: 999;
+    position: relative;
     margin: 0 auto;
     height: 100%;
     min-width: fit-content;
@@ -13,13 +15,14 @@ html {
     scroll-behavior: smooth;
     background-color: #e2e2e2;
     transition: all 0.5s linear;
-    background: url('../img/hetag2.jpeg') fixed center -100px no-repeat;
-    background-size: cover;
 }
 
-/* .body_image {
-
-} */
+.hetag_img {
+    top: -30px;
+    position: fixed;
+    z-index: -1;
+    min-height: min-content;
+}
 
 .body_wrapper {
     min-height: 100%;
@@ -470,9 +473,9 @@ html {
         color: #393737;
     } */
 
-    .body {
+    /* .body {
         background: url('../img/hetag2.jpeg') 75% -100px no-repeat fixed;
-    }
+    } */
 
     .main_afisha-standUp:hover {
         transform: none;
@@ -999,6 +1002,12 @@ html {
 @media (max-width: 425px) {
     .img_sociall-ex {
         border-radius: 60px;
+    }
+
+    .hetag_img {
+        top: -50px;
+        right: -50px;
+        width: 110%;
     }
 
     .content {
