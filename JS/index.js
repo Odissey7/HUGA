@@ -11,30 +11,37 @@ huga.onclick = function (evt) {
     };
 }
 
-const btnBurger = document.querySelector('.burger');
-const burgerOpen = document.querySelector('.burger_popup-active');
+// const btnBurger = document.querySelector('.burger');
+// const burgerOpen = document.querySelector('.burger_popup-active');
 
-btnBurger.onclick = function (evt) {
-  evt.preventDefault();
-  btnBurger.classList.toggle('burger_none')
-  burgerOpen.classList.toggle(`burger_popup`);
-  document.onkeydown = function (evt) {
-    if (evt.key === `Escape` || this.onclick) {
-      burgerOpen.classList.remove(`burger_popup`);
-    }
-  };
-}
+// btnBurger.onclick = function (evt) {
+//   evt.preventDefault();
+//   btnBurger.classList.toggle('burger_none')
+//   burgerOpen.classList.toggle(`burger_popup`);
+//   document.onkeydown = function (evt) {
+//     if (evt.key === `Escape` || this.onclick) {
+//       burgerOpen.classList.remove(`burger_popup`);
+//     }
+//   };
+// }
 
-const opPop = document.querySelector('.wrapper_pop');
-const popNone = document.querySelector('.burger_popup-active');
+// const opPop = document.querySelector('.wrapper_pop');
+// const popNone = document.querySelector('.burger_popup-active');
 
-opPop.onclick = function (evt) {
-  evt.preventDefault();
-  btnBurger.classList.toggle('burger_none')
-  popNone.classList.toggle(`burger_popup`);
-    document.onkeydown = function (evt) {
-      if (evt.key === `Escape` || this.onclick) {
-        popNone.classList.remove(`burger_popup`);
-      }
-    };
+// opPop.onclick = function (evt) {
+//   evt.preventDefault();
+//   btnBurger.classList.toggle('burger_none')
+//   popNone.classList.toggle(`burger_popup`);
+//     document.onkeydown = function (evt) {
+//       if (evt.key === `Escape` || this.onclick) {
+//         popNone.classList.remove(`burger_popup`);
+//       }
+//     };
+// }
+
+
+
+document.querySelector('.burger').onclick = function() {
+  document.querySelector('.burger').classList.toggle('active');
+  document.querySelector('.burger_popup-active').classList.toggle('burger_popup');
 }

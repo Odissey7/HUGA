@@ -1,3 +1,136 @@
+.snow-blocks{
+    /* background: url("../img/favicon.ico") 0 no-repeat #0182c6; */
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+    /* opacity: 0.3; */
+    min-height: 1500px;
+    width: 100%;
+    overflow: hidden;
+    background-size:cover;
+}
+
+/* .snow1{
+    transition: all 0.5s linear;
+    background-image: url("../img/snow1.png");
+    position:absolute;
+    width: 100%;
+    height: 1600px;
+    animation: snow1 8s linear infinite;    
+} */
+
+.snow2{
+    transition: all 0.5s linear;
+    background-image: url("../img/snow2.png"),url("../img/snow3.png");
+    background-repeat: repeat;
+    animation: snow2 5s linear infinite;
+    width: 100%;
+    height: 1600px;
+    position:absolute;
+}
+
+@keyframes snow2{
+    0%{background-position: 0 0, 0 0;}
+    /* 25% {background-position: 3% 250px, 3% 250px;} */
+    /* 50% {background-position: 6% 500px, 9% 500px;} */
+    /* 75% {background-position: 9% 750px, 9% 750px;} */
+    100%{background-position: 90% 1000px, 90% 1000px;}
+}
+/* @keyframes snow1{
+    from{background-position: 0 -300px;}
+    20% {background-position: 20% -100px;}
+    40% {background-position: 30% 100px;}
+    60% {background-position: 40% 300px;}
+    80% {background-position: 50% 500px;}
+    to{background-position: 20% 700px;}
+} */
+
+
+.burger_wrap {
+    /* position: sticky; */
+    width: 100%;
+    display: flex;
+    /* padding-top: 25px; */
+    justify-content: end;
+}
+
+.burger{
+    margin-right: 25px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    align-items: center;
+    justify-content: flex-end;
+    width: 65px;
+    height: 40px;
+}
+
+.burger span{
+    height: 3px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { background-color: #000; transform: scale(0) }
+
+.burger.active::before{
+    background-color: #000;
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    background-color: #000;
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+@media (max-width: 768px) {
+
+    .burger_wrap {
+        margin-top: 35px;
+    }
+
+    .burger { display: flex }
+
+    /* .nav_bur{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    } */
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -20,8 +153,18 @@ html {
 .hetag_img {
     top: -30px;
     position: fixed;
+    width: 100%;
     z-index: -1;
     min-height: min-content;
+}
+@media (max-width: 768px) {
+
+    .hetag_img {
+        object-fit: cover;
+        top: -50px;
+        right: 0px;
+        width: 115%;
+    }
 }
 
 .body_wrapper {
@@ -44,7 +187,8 @@ html {
 
 .burger_popup-active {
     transition: all 0.5s linear;
-    z-index: 9999;
+    z-index: 999;
+    /* opacity: 0.5; */
     top: 0;
     position: fixed;
     width: 100%;
@@ -174,7 +318,7 @@ html {
         position: relative;
     }
     
-    .burger {
+    /* .burger {
         transition: all 1s linear;
         z-index: 5;
         position: sticky;
@@ -183,7 +327,7 @@ html {
         width: 60px;
         top: 30px;
         left: 87%;
-    }
+    } */
     
     .header_wrapper {
         display: none;
@@ -198,6 +342,11 @@ html {
 
 .header_merch {
     height: 100px;
+}
+
+.header {
+    position: relative;
+    z-index: 9999;
 }
 
 /* HEADER */
@@ -432,6 +581,8 @@ html {
 
 /* MAIN */
 .main {
+    position: relative;
+    z-index: 9999;
     flex: 1 1 auto;
     height: 100%;
 }
@@ -518,9 +669,6 @@ html {
 }
 
 @media (min-width: 768px) {
-    .burger_popup-active {
-        display: none;
-    }
 
     .main_afisha-standUp:hover {
         transform: scale(1.03);
@@ -550,7 +698,7 @@ html {
 
     .main {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: baseline;
     }
@@ -636,6 +784,7 @@ html {
 }
 
 .standUp_place {
+    font-size: 19px;
     text-transform: uppercase;
     max-width: 160px;
 }
@@ -674,6 +823,8 @@ html {
 }
 
 .main_video {
+    position: relative;
+    z-index: 9999;
     width: 100%;
     margin-top: 60px;
 }
@@ -1002,12 +1153,6 @@ html {
 @media (max-width: 425px) {
     .img_sociall-ex {
         border-radius: 60px;
-    }
-
-    .hetag_img {
-        top: -50px;
-        right: -50px;
-        width: 110%;
     }
 
     .content {
