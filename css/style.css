@@ -153,6 +153,7 @@ html {
 .hetag_img {
     top: -30px;
     position: fixed;
+    max-width: 2000px;
     width: 100%;
     z-index: -1;
     min-height: min-content;
@@ -829,7 +830,7 @@ html {
 
     .main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         justify-items: center;
         align-items: baseline;
     }
@@ -838,13 +839,13 @@ html {
         display: grid;
         row-gap: 30px;
         grid-template-columns: minmax(540px, 1fr);
-        grid-template-rows: repeat(5, 175px);
+        grid-template-rows: repeat(2, 175px);
     }
-    
+/*     
     .main_afisha_3 {
         grid-template-rows: repeat(5, 175px);
 
-    }
+    } */
 }
 
 .main_afisha {
@@ -854,6 +855,7 @@ html {
 .standUp_afisha {
     font-size: 30px;
     text-transform: uppercase;
+    white-space: nowrap;
     margin: 0;
 }
 
@@ -924,6 +926,12 @@ html {
     text-transform: uppercase;
     max-width: 160px;
 }
+@media (min-width:768px) {
+    
+.standUp_place {
+    font-size: 14px;
+}
+}
 
 .buttun_tickets {
     box-sizing: border-box;
@@ -936,7 +944,7 @@ html {
     box-sizing: border-box;
     text-transform: uppercase;
     font-size: 20px;
-    min-width: 150px;
+    min-width: 130px;
     min-height: 50px;
     max-width: 150px;
     max-height: 50px;
@@ -1358,6 +1366,13 @@ html {
 .box:hover {
     cursor: pointer;
 }
+
+@media (max-width:625px) {
+    .box:hover {
+        height: 0px;
+    }
+}
+
 .box .imgBx {
     z-index: 8;
     position: absolute;
@@ -1433,7 +1448,7 @@ html {
     }
 }
 
-@media (min-width:625px) {
+@media (min-width:626px) {
     
     .box {
         width: 250px;
