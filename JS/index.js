@@ -1,3 +1,24 @@
+const menu=document.querySelector(".menu");
+const toggle=document.querySelector(".toggle");
+toggle.addEventListener("click",()=>{
+  menu.classList.toggle("active");
+})
+
+// const menu2=document.querySelector(".menu");
+// const toggle2=document.querySelector(".toggle");
+// toggle.addEventListener("click",()=>{
+//   menu.classList.toggle("active");
+// })
+
+
+
+
+
+
+
+
+
+
 const huga = document.querySelector(`.my__name`);
 const huga_team = document.querySelector(`.about_my-team-none`);
 
