@@ -4,11 +4,7 @@ toggle.addEventListener("click",()=>{
   menu.classList.toggle("active");
 })
 
-// const menu2=document.querySelector(".menu");
-// const toggle2=document.querySelector(".toggle");
-// toggle.addEventListener("click",()=>{
-//   menu.classList.toggle("active");
-// })
+
 
 
 
@@ -32,33 +28,7 @@ huga.onclick = function (evt) {
     };
 }
 
-// const btnBurger = document.querySelector('.burger');
-// const burgerOpen = document.querySelector('.burger_popup-active');
 
-// btnBurger.onclick = function (evt) {
-//   evt.preventDefault();
-//   btnBurger.classList.toggle('burger_none')
-//   burgerOpen.classList.toggle(`burger_popup`);
-//   document.onkeydown = function (evt) {
-//     if (evt.key === `Escape` || this.onclick) {
-//       burgerOpen.classList.remove(`burger_popup`);
-//     }
-//   };
-// }
-
-// const opPop = document.querySelector('.wrapper_pop');
-// const popNone = document.querySelector('.burger_popup-active');
-
-// opPop.onclick = function (evt) {
-//   evt.preventDefault();
-//   btnBurger.classList.toggle('burger_none')
-//   popNone.classList.toggle(`burger_popup`);
-//     document.onkeydown = function (evt) {
-//       if (evt.key === `Escape` || this.onclick) {
-//         popNone.classList.remove(`burger_popup`);
-//       }
-//     };
-// }
 
 
 
@@ -66,3 +36,16 @@ document.querySelector('.burger').onclick = function() {
   document.querySelector('.burger').classList.toggle('active');
   document.querySelector('.burger_popup-active').classList.toggle('burger_popup');
 }
+
+// document.querySelector('.main_afisha-standUp').onclick = function() {
+//   document.querySelector('.thecard').classList.toggle('thecard_active');
+// }
+// document.querySelector('.main_afisha-standUp_sec').onclick = function() {
+//   document.querySelector('.thecard_sec').classList.toggle('thecard_active');
+// }
+// document.querySelector('.main_afisha-standUp_2').onclick = function() {
+//   document.querySelector('.thecard_2').classList.toggle('thecard_active');
+// }
+// document.querySelector('.main_afisha-standUp_3').onclick = function() {
+//   document.querySelector('.thecard_3').classList.toggle('thecard_active');
+// }
