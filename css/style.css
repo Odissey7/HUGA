@@ -51,8 +51,15 @@ html {
     /* background-color: #e2e2e2; */
     transition: all 0.5s linear;
 }
+/* 
+.body_image {
+    background: url("../img/hetag2.jpeg") no-repeat fixed top center;
+    background-size: cover;
+} */
 
 .hetag_img {
+    pointer-events: none;
+    user-select: none;
     top: -30px;
     position: fixed;
     max-width: 2000px;
@@ -73,6 +80,19 @@ html {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 
@@ -121,7 +141,7 @@ a {
 }
 
 .menu.active .toggle{
-    transform:rotate(360deg);
+    transform:rotate(-360deg);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15),
     0 0 0 2px #333,
     0 0 0 8px #fff;
@@ -253,7 +273,7 @@ a {
     position: fixed;
     padding: 20px;
     z-index: 99999;
-    background-color: #FAF6F2;
+    background-color: #fff;
     border-radius: 50px;
     align-items: center;
     justify-content: flex-end;
@@ -1079,7 +1099,6 @@ a {
 
 
 
-  /* THE CARD HOLDS THE FRONT AND BACK FACES */
 .thecard{
     position: relative;
     top: 0;
@@ -1087,21 +1106,16 @@ a {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     transition: all 0.4s linear;
 }
 
-  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-/* .main_afisha-standUp:hover .thecard{
-    transform: rotateX(180deg);
-} */
 
 .thecard_active{
     transition: all 0.4s linear;
     transform: rotateX(180deg);
 }
 
-  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
 .thefront{
     user-select: none;
     position: absolute;
@@ -1110,36 +1124,32 @@ a {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     font-size: 40px;
-    backface-visibility: hidden;
-    overflow: hidden;
+    /* backface-visibility: hidden;
+    overflow: hidden; */
     color: #ff0000;
 }
 
-  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 .theback{
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 10px;
-    backface-visibility: hidden;
-    overflow: hidden;
+    /* backface-visibility: hidden;
+    overflow: hidden; */
     width: 100%;
     height: 100%;
     color: #fff;
     text-align: center;
-    /* transform: rotateX(180deg); */
     transform: rotateX(0deg);
 }
 
 .theback_sec {
     height: 100%;
-    /* transform: rotateX(180deg); */
-    /* transform: scale(-1, -1); */
 }
 
 
 .main_afisha-standUp {
-    cursor: pointer;
+    /* cursor: pointer; */
     /* transform: rotateX(180deg); */
     /* opacity: 0.6; */
     position: relative;
@@ -1268,11 +1278,20 @@ a {
 }
 
 .standUp_place {
+    transition: all 0.4s linear;
     font-size: 12px;
     text-transform: uppercase;
     max-width: 160px;
 }
 
+.standUp_place:hover {
+    transition: all 0.4s linear;
+    color: #ff0000;
+}
+.standUp_place:active {
+    transition: all 0.4s linear;
+    color: #ff0000;
+}
 
 .buttun_tickets {
     user-select: none;
@@ -1911,6 +1930,25 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MERCH */
 .body_merch {
     background: #fff;
@@ -2204,136 +2242,152 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
 /* MY TEAM */
 
 .body_myTeam {
-    background: #032dffaf;
-    min-height: 1000px;
+    background: #000;
+    min-height: 2000px;
     transition: all 0.5s linear;
+    color: #FFF;
+    animation: start_team 2s linear 1;
 }
 
-.navigation_sent_myTeam {
-    border: 3px solid #00000000;
-    transition: all 0.4s linear;
-    color: #fff;
-}
-
-.navigation_sent_myTeam:hover {
-    transition: all 0.4s linear;
-    border: 3px solid #787575;
-    color: #787575;
-}
-
-/* MY TEAM MAIN  */
-
-.mi_myTeam_wrapper {
-    padding: 0 20px;
-    margin-top: 60px;
-}
-
-@media (max-width: 1500px) {
-    .myTeam_item {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
-        grid-template-rows: repeat(3, 400px);
+@keyframes start_team {
+    0% {
+        opacity: 0;
     }
-}
-@media (max-width: 960px) {
-    .myTeam_item {
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-        grid-template-rows: repeat(4, 400px);
-    }
-}
-@media (max-width: 425px) {
-    .myTeam_item {
-        grid-template-columns: repeat(1, minmax(300px, 1fr));
-        grid-template-rows: repeat(8, 400px);
-    }
-}
-@media (min-width: 1500px) {
-    .myTeam_item {
-        grid-template-columns: repeat(4, minmax(300px, 1fr));
-        grid-template-rows: repeat(2, 400px);
+    100% {
+        opacity: 1;
     }
 }
 
-.myTeam_item {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 40px;
-}
 
-.myTeam_link {
-    border-radius: 20px;
-    background-color: #fff;
-    width: 300px;
-    height: 400px;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0 auto;
-    box-sizing: border-box;
 
-    display: flex;
-    flex-direction: column;
-    transition: all 0.4s linear;
-}
-
-.myTeam_link:hover {
-    transition: all 0.4s linear;
-    box-shadow: 0 0 5px 5px #fff;
-    transform: scale(1.06);
-}
-
-.linkTeam_box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+.header_team {
     width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-.img_myTeam {
-    margin-top: 10px;
-    border-radius: 20px;
-    width: 80%;
-    height: 80%;
+.team_head_list {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    
 }
 
-.name_myTeam_wrap {
-    height: 100px;
+.anonse_team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+}
+
+.anonse_team_sec {
+    justify-content: center;
+    column-gap: 10px;
+}
+
+._back_head {
+    user-select: none;
+    font-size: larger;
+    color: #fff;
+    transition: all 0.4s linear;
+    padding: 10px 70px;
+    border-radius: 10px;
+}
+
+._back_head:hover {
+    background-color: #0053f7;
+    transition: all 0.4s linear;
+    scale: 1.1;
+}
+
+
+.video_team {
+    user-select: none;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.main_team {
+    margin-top: 150px;
+}
+
+.my_team_team {
+    user-select: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+.team_list {
     display: flex;
     flex-direction: column;
+    row-gap: 200px;
+    margin-bottom: 150px;
+}
+
+.item_team {
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    text-align: center;
 }
 
-.name_team {
-    margin: 0;
+.item_team_2 {
+    flex-direction: row-reverse;
 }
 
-.name_team_work {
-    margin: 0;
+.wrap_wrap_text_team {
+    width: 30%;
 }
 
-
-
-
-
-
-
-
-
-
-/* THE MAINCONTAINER HOLDS EVERYTHING */
-.maincontainer{
-    position: absolute;
-    width: 250px;
-    height: 320px;
-    background: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+.name_team_team {
+    user-select: none;
 }
 
+.team_work_team {
+    user-select: none;
+    font-weight: 600;
+    font-style: italic;
+    font-size: larger;
+}
 
+.about_team_text {
+    user-select: none;
+}
+
+.img_wrap_wrap {
+    width: 30%;
+}
+
+.img_team {
+    user-select: none;
+    width: 100%;
+    height: 50%;
+    border-radius: 30px;
+}

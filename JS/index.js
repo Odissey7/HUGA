@@ -49,3 +49,11 @@ document.querySelector('.burger').onclick = function() {
 // document.querySelector('.main_afisha-standUp_3').onclick = function() {
 //   document.querySelector('.thecard_3').classList.toggle('thecard_active');
 // }
+
+
+// if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
+//   var dpt = window.devicePixelRatio;
+//   var widthM = window.screen.width * dpt;
+//   var widthH = window.screen.height * dpt;
+//   document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
+// }

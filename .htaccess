@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.hugaev.com$ [NC]
+RewriteRule ^(.*)$ https://hugaev.com/$1 [R=301,L]
