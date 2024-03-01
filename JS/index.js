@@ -19,6 +19,45 @@ huga.onclick = function (evt) {
 }
 
 
+document.getElementById("switchMode").onclick = function () {
+  document.querySelector('.strange_btn_img_sec').classList.toggle('strange_btn_img_active');
+
+
+  let theme = document.getElementById("theme");
+  if (theme.getAttribute("href") === "./css/light.css") {
+    theme.href = "./css/dark.css";
+  }
+  else if (theme.getAttribute("href") === "./css/dark.css") {
+    theme.href = "./css/light.css";
+  }
+
+  let theme2 = document.getElementById("theme2");
+  if (theme2.getAttribute("href") === "./css/dark.css") {
+    theme2.href = "./css/light.css";
+  }
+  else if (theme.getAttribute("href") === "./css/light.css") {
+    theme2.href = "./css/dark.css";
+  }
+
+
+  
+  // let theme11 = document.getElementById("theme");
+  // if (theme11.getAttribute("href") === "./css/dark.css") {
+  //   theme11.href = "./css/light.css";
+  // }
+  // else {
+  //   theme11.href = "./css/light.css";
+  // }
+
+  // let theme222 = document.getElementById("theme2");
+  // if (theme222.getAttribute("href") === "./css/light.css") {
+  //   theme222.href = "./css/dark.css";
+  // }
+  // else {
+  //   theme222.href = "./css/dark.css";
+  // }
+};
+
 
 
 
@@ -28,49 +67,97 @@ document.querySelector('.burger').onclick = function() {
 }
 
 
-document.querySelector('.strange_btn_sec').onclick = function () { 
-  document.querySelector('.strange_btn_img_sec').classList.toggle('strange_btn_img_active');
-  document.querySelector('.body').classList.toggle('body_active');
-  document.querySelector('.hetag_img').classList.toggle('hetag_img_none');
-  document.querySelector('.afisha').classList.toggle('afisha_active');
-  document.querySelector('.toggle').classList.toggle('toggle_active');
-  document.querySelector('.toggle_text').classList.toggle('toggle_text_active');
-  document.querySelector('.my__name-big').classList.toggle('my__name-big_active');
-  document.querySelector('.city_show').classList.toggle('city_show_active');
-  // document.querySelector('.main_afisha-standUp').classList.toggle('main_afisha-standUp_active');
-  // document.querySelector('.main_afisha-standUp_1').classList.toggle('main_afisha-standUp_active');
-  // document.querySelector('.main_afisha-standUp_2').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_3').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_4').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_5').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_6').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_7').classList.toggle('main_afisha-standUp_active');
-  document.querySelector('.main_afisha-standUp_8').classList.toggle('main_afisha-standUp_active');
-  // document.querySelector('.standUp_place').classList.toggle('standUp_place_active');
-  // document.querySelector('.standUp_place_1').classList.toggle('standUp_place_active');
-  // document.querySelector('.standUp_place_2').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_3').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_4').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_5').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_6').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_7').classList.toggle('standUp_place_active');
-  document.querySelector('.standUp_place_8').classList.toggle('standUp_place_active');
-  // document.querySelector('.tickets_buy').classList.toggle('tickets_buy_active');
-  // document.querySelector('.tickets_buy_1').classList.toggle('tickets_buy_active');
-  // document.querySelector('.tickets_buy_2').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_3').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_4').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_5').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_6').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_7').classList.toggle('tickets_buy_active');
-  document.querySelector('.tickets_buy_8').classList.toggle('tickets_buy_active');
-  // document.querySelector('.img_new_sec').classList.toggle('img_new_sec_active');
-  // document.querySelector('.img_new_sec_1').classList.toggle('img_new_sec_active');
-  document.querySelector('.video_title').classList.toggle('video_title_active');
-  document.querySelector('.sociall_background').classList.toggle('sociall_background_active');
-  document.querySelector('.question').classList.toggle('question_active');
-  
+// document.querySelector('.strange_btn_sec').onclick = function () { 
+
+// }
+
+
+
+
+
+
+const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
+const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
+const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
+const switcherRadios = document.querySelectorAll('.switcher__radio');
+
+function setupSwitcher() {
+    const savedScheme = getSavedScheme();
+
+    if (savedScheme !== null) {
+        const currentRadio = document.querySelector(`.switcher__radio[value=${savedScheme}]`);
+        currentRadio.checked = true;
+    }
+
+    [...switcherRadios].forEach((radio) => {
+        radio.addEventListener('change', (event) => {
+            setScheme(event.target.value);
+        });
+    });
 }
+
+function setupScheme() {
+    const savedScheme = getSavedScheme();
+    const systemScheme = getSystemScheme();
+
+    if (savedScheme === null) return;
+
+    if (savedScheme !== systemScheme) {
+        setScheme(savedScheme);
+    }
+}
+
+function setScheme(scheme) {
+    switchMedia(scheme);
+
+    if (scheme === 'auto') {
+        clearScheme();
+    } else {
+        saveScheme(scheme);
+    }
+}
+
+function switchMedia(scheme) {
+    let lightMedia;
+    let darkMedia;
+
+    if (scheme === 'auto') {
+        lightMedia = '(prefers-color-scheme: light)';
+        darkMedia = '(prefers-color-scheme: dark)';
+    } else {
+        lightMedia = (scheme === 'light') ? 'all' : 'not all';
+        darkMedia = (scheme === 'dark') ? 'all' : 'not all';
+    }
+
+    [...lightStyles].forEach((link) => {
+        link.media = lightMedia;
+    });
+
+    [...darkStyles].forEach((link) => {
+        link.media = darkMedia;
+    });
+}
+
+function getSystemScheme() {
+    const darkScheme = darkSchemeMedia.matches;
+
+    return darkScheme ? 'dark' : 'light';
+}
+
+function getSavedScheme() {
+    return localStorage.getItem('color-scheme');
+}
+
+function saveScheme(scheme) {
+    localStorage.setItem('color-scheme', scheme);
+}
+
+function clearScheme() {
+    localStorage.removeItem('color-scheme');
+}
+
+setupSwitcher();
+setupScheme();
 
 
 // document.querySelector('.main_afisha-standUp').onclick = function() {
