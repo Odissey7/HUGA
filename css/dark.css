@@ -1,5 +1,5 @@
 :root {
-    --back-color: #000;
+    --back-color: #ececec;
     --body-color: #00b4ff;
     --wrap-color: #fff;
     --name-show: #000;
@@ -7,6 +7,7 @@
     --huga-run: 0.25;
     --city-show: #00b4ff;
     --afisha-color: #ffffff87;
-    --hetag-opacity: 0;
     --btn-tickets: #00b4ff;
+    --btn-tickets2: #00b4ff;
+    --btn-tickets3: #00b4ff;
 }

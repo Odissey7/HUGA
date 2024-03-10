@@ -1,8 +1,8 @@
-const menu=document.querySelector(".menu");
-const toggle=document.querySelector(".toggle");
-toggle.addEventListener("click",()=>{
+const menu = document.querySelector(".menu");
+const toggle = document.querySelector(".toggle");
+toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
-})
+});
 
 
 const huga = document.querySelector(`.my__name`);
@@ -16,11 +16,20 @@ huga.onclick = function (evt) {
           huga_team.classList.remove(`about_my-team`);
       }
     };
-}
+  }
+  
+  
+document.querySelector('.burger').onclick = function () {
+  document.querySelector('.burger').classList.toggle('active');
+  document.querySelector('.burger_popup-active').classList.toggle('burger_popup');
+};
+
 
 
 document.getElementById("switchMode").onclick = function () {
   document.querySelector('.strange_btn_img_sec').classList.toggle('strange_btn_img_active');
+  document.querySelector('.hetag_img').classList.toggle('hetag_img_none');
+  document.querySelector('.hetag_img_sec').classList.toggle('hetag_img_none_none');
 
 
   let theme = document.getElementById("theme");
@@ -35,143 +44,198 @@ document.getElementById("switchMode").onclick = function () {
   if (theme2.getAttribute("href") === "./css/dark.css") {
     theme2.href = "./css/light.css";
   }
-  else if (theme.getAttribute("href") === "./css/light.css") {
+  else if (theme2.getAttribute("href") === "./css/light.css") {
     theme2.href = "./css/dark.css";
   }
 
-
+  // if (img1.getAttribute("src") == "./img/oldmoneyBIG.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img2.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG1.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img2.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG2.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img2.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // }
   
-  // let theme11 = document.getElementById("theme");
-  // if (theme11.getAttribute("href") === "./css/dark.css") {
-  //   theme11.href = "./css/light.css";
+  
+  // if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt1.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt2.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt3.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt4.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt5.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt6.jpg") {
+  //   setInterval(() => img2.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  //   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
   // }
-  // else {
-  //   theme11.href = "./css/light.css";
+  
+}
+
+
+
+let img1 = document.querySelector("#img1");
+// if (img1.getAttribute("src") == "./img/oldmoneyBIG.jpg") {
+//   img1.src = Random();
+// }
+
+  // if (img1.getAttribute("src") == "./img/oldmoneyBIG.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG1.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
+  // } else if (img1.getAttribute("src") == "./img/oldmoneyBIG2.jpg") {
+  //   setInterval(() => img1.src = New_photos_BIG_ALL[Math.floor(Math.random() * New_photos_BIG_ALL.length)], 3000 )
   // }
 
-  // let theme222 = document.getElementById("theme2");
-  // if (theme222.getAttribute("href") === "./css/light.css") {
-  //   theme222.href = "./css/dark.css";
-  // }
-  // else {
-  //   theme222.href = "./css/dark.css";
-  // }
-};
 
-
-
-
-document.querySelector('.burger').onclick = function() {
-  document.querySelector('.burger').classList.toggle('active');
-  document.querySelector('.burger_popup-active').classList.toggle('burger_popup');
-}
-
-
-// document.querySelector('.strange_btn_sec').onclick = function () { 
-
+let img2 = document.querySelector("#img2");
+// if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+//   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt1.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+//   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt2.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+// setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt3.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+// setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt4.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+// setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt5.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+// setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
+// } else if (img1.getAttribute("src") == "./img/oldmoneyBIG_wt6.jpg") {
+//   theme.href = "./css/dark.css";
+//   theme2.href = "./css/light.css";
+//   img2.src = Random2();
+//   setInterval(() => img1.src = New_photos_BIG_ALL_WT[Math.floor(Math.random() * New_photos_BIG_ALL_WT.length)], 3000 )
 // }
 
 
 
+let New_photos_ALL = ["./img/oldmoney.jpg", "./img/oldmoney1.jpg", "./img/oldmoney2.jpg", "./img/oldmoney3.jpg","./img/oldmoney4.jpg", "./img/oldmoney5.jpg", "./img/oldmoney6.jpg", "./img/oldmoney7.jpg", "./img/oldmoney8.jpg", "./img/oldmoney_wt2.jpg", "./img/oldmoney_wt3.jpg"]
+
+let New_photos = ["./img/oldmoney.jpg", "./img/oldmoney1.jpg", "./img/oldmoney2.jpg", "./img/oldmoney3.jpg", "./img/oldmoney4.jpg", "./img/oldmoney5.jpg", "./img/oldmoney6.jpg", "./img/oldmoney7.jpg", "./img/oldmoney8.jpg"]
+
+let New_photos_WT = ["./img/oldmoney_wt2.jpg", "./img/oldmoney_wt3.jpg"]
 
 
-
-const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
-const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
-const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
-const switcherRadios = document.querySelectorAll('.switcher__radio');
-
-function setupSwitcher() {
-    const savedScheme = getSavedScheme();
-
-    if (savedScheme !== null) {
-        const currentRadio = document.querySelector(`.switcher__radio[value=${savedScheme}]`);
-        currentRadio.checked = true;
-    }
-
-    [...switcherRadios].forEach((radio) => {
-        radio.addEventListener('change', (event) => {
-            setScheme(event.target.value);
-        });
-    });
+function Random_min() {
+  return New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)]
+}
+function Random_min1() {
+  return New_photos[Math.floor(Math.random() * New_photos.length)]
+}
+function Random_min2() {
+  return New_photos_WT[Math.floor(Math.random() * New_photos_WT.length)]
 }
 
-function setupScheme() {
-    const savedScheme = getSavedScheme();
-    const systemScheme = getSystemScheme();
 
-    if (savedScheme === null) return;
-
-    if (savedScheme !== systemScheme) {
-        setScheme(savedScheme);
-    }
+if (window.innerWidth > 1300) {
+  img1.src = "./img/hetag2.jpeg"
 }
 
-function setScheme(scheme) {
-    switchMedia(scheme);
-
-    if (scheme === 'auto') {
-        clearScheme();
-    } else {
-        saveScheme(scheme);
-    }
+if (window.innerWidth <= 1300) {
+  img1.src = Random_min();
+}
+if (img1.getAttribute("src") == "./img/oldmoney.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney1.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney2.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney3.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney4.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney5.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney6.jpg") {
+  img2.src = Random_min2();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney7.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney8.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/light.css";
+  theme2.href = "./css/dark.css";
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
 }
 
-function switchMedia(scheme) {
-    let lightMedia;
-    let darkMedia;
-
-    if (scheme === 'auto') {
-        lightMedia = '(prefers-color-scheme: light)';
-        darkMedia = '(prefers-color-scheme: dark)';
-    } else {
-        lightMedia = (scheme === 'light') ? 'all' : 'not all';
-        darkMedia = (scheme === 'dark') ? 'all' : 'not all';
-    }
-
-    [...lightStyles].forEach((link) => {
-        link.media = lightMedia;
-    });
-
-    [...darkStyles].forEach((link) => {
-        link.media = darkMedia;
-    });
+if (img1.getAttribute("src") == "./img/oldmoney_wt2.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/dark.css";
+  theme2.href = "./css/light.css";
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney_wt3.jpg") {
+  img2.src = Random_min();
+  theme.href = "./css/dark.css";
+  theme2.href = "./css/light.css";
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
 }
 
-function getSystemScheme() {
-    const darkScheme = darkSchemeMedia.matches;
-
-    return darkScheme ? 'dark' : 'light';
-}
-
-function getSavedScheme() {
-    return localStorage.getItem('color-scheme');
-}
-
-function saveScheme(scheme) {
-    localStorage.setItem('color-scheme', scheme);
-}
-
-function clearScheme() {
-    localStorage.removeItem('color-scheme');
-}
-
-setupSwitcher();
-setupScheme();
-
-
-// document.querySelector('.main_afisha-standUp').onclick = function() {
-//   document.querySelector('.thecard').classList.toggle('thecard_active');
-// }
-// document.querySelector('.main_afisha-standUp_sec').onclick = function() {
-//   document.querySelector('.thecard_sec').classList.toggle('thecard_active');
-// }
-// document.querySelector('.main_afisha-standUp_2').onclick = function() {
-//   document.querySelector('.thecard_2').classList.toggle('thecard_active');
-// }
-// document.querySelector('.main_afisha-standUp_3').onclick = function() {
-//   document.querySelector('.thecard_3').classList.toggle('thecard_active');
-// }
 
 
 // if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
