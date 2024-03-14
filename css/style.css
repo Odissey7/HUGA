@@ -78,6 +78,7 @@ html {
     /* animation: hetag_anim 4s linear infinite; */
 }
 
+
 @keyframes hetag_anim {
     0% {
         opacity: 1;
@@ -92,15 +93,6 @@ html {
     }
 }
 
-@media (max-width: 1040px) {
-
-    .hetag_img {
-        object-fit: cover;
-        top: 0px;
-        right: 0px;
-        /* width: 115%; */
-    }
-}
 
 .hetag_img_none {
     transition: all 0.5s linear;
@@ -110,7 +102,7 @@ html {
 .hetag_img_none_none {
     transition: all 0.5s linear;
     opacity: 1;
-
+    
 }
 
 .hetag_img_sec {
@@ -137,7 +129,30 @@ html {
     } */
     100% {
         opacity: 0;
+        
+    }
+}
 
+@media (max-width: 1040px) {
+    .hetag_img_sec {
+        object-fit: cover;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        /* min-width: 100%; */
+        max-width: 100%;
+        /* object-fit: contain; */
+    }
+    
+    .hetag_img {
+        scale: 0.5;
+        /* object-fit: contain; */
+        width: 100%;
+        /* min-width: 100%; */
+        max-width: 100%;
+        object-fit: cover;
+        top: 0px;
+        right: 0px;
     }
 }
 
@@ -1022,7 +1037,7 @@ li {
         display: grid;
         row-gap: 30px;
         grid-template-columns:repeat(2,  minmax(540px, 1fr));
-        grid-template-rows: repeat(2, 150px);
+        grid-template-rows: repeat(1, 150px);
     }
     /*     
     .main_afisha_3 {
@@ -1079,7 +1094,7 @@ li {
     .main_afisha {
         display: grid;
         grid-template-columns:repeat(1,  minmax(540px, 1fr));
-        grid-template-rows: repeat(5, 150px);
+        grid-template-rows: repeat(3, 150px);
 
         width: 100%;
     }
