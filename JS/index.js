@@ -160,71 +160,65 @@ function Random_min2() {
 
 
 
-// if (window.innerWidth <= 1300) {
-  // img1.src = Random_min();
+
+// if (img1.getAttribute("src") == "./img/oldmoney6.jpg") {
+//   img1.src = Random_min();
+//   img2.src = Random_min();
+// }
+
+
+
+if (window.innerWidth <= 1300) {
+  img1.src = Random_min();
+  img2.src = Random_min();
+}
+
+
+if (img1.getAttribute("src") == "./img/oldmoney.jpg") {
   // img2.src = Random_min();
-// }
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney1.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney2.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney3.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney4.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney5.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney6.jpg") {
+  // img2.src = Random_min2();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney7.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+} else if (img1.getAttribute("src") == "./img/oldmoney8.jpg") {
+  // img2.src = Random_min();
+  setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+  setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
+}
 
-  if (window.innerWidth > 1300) {
-    img1.src = "./img/hetag2.jpeg";
-    img2.src = "./img/hetag2.jpeg";
-  }
 
-// if (img1.getAttribute("src") == "./img/oldmoney.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney1.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney2.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney3.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney4.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney5.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney6.jpg") {
-//   img2.src = Random_min2();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney7.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// } else if (img1.getAttribute("src") == "./img/oldmoney8.jpg") {
-//   img2.src = Random_min();
-//   theme.href = "./css/light.css";
-//   theme2.href = "./css/dark.css";
-//   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-//   setInterval(() => img2.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
-// }
+if (window.innerWidth > 1300) {
+  img1.src = "./img/hetag2.jpeg";
+  img2.src = "./img/hetag2.jpeg";
+}
+
+
 
 // if (img1.getAttribute("src") == "./img/oldmoney_wt2.jpg") {
 //   img2.src = Random_min();

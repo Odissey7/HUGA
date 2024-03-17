@@ -145,7 +145,7 @@ html {
     }
     
     .hetag_img {
-        scale: 0.5;
+        /* scale: 0.5; */
         /* object-fit: contain; */
         width: 100%;
         /* min-width: 100%; */
