@@ -46,7 +46,7 @@ html {
     margin: 0 auto;
     height: 100%;
     min-width: fit-content;
-    max-width: 2000px;
+    max-width: 2200px;
     padding: 0;
     font-style: normal;
     font-family: "PT Sans";
@@ -59,19 +59,22 @@ html {
 .body_active {
     background-color: #000;
 }
-/* 
-.body_image {
+
+
+/* .body_image {
+    transition: all 0.5s linear;
     background: url("../img/hetag2.jpeg") no-repeat fixed top center;
     background-size: cover;
 } */
 
 .hetag_img {
+    background: url("../img/hetag2.jpeg") no-repeat fixed top center;
     pointer-events: none;
     user-select: none;
-    top: -40px;
     position: fixed;
-    max-width: 2000px;
-    width: 100%;
+    max-width: 2200px;
+    object-fit: cover;
+    width: 100vw;
     z-index: -1;
     min-height: min-content;
     transition: all 0.5s linear;
@@ -96,7 +99,7 @@ html {
 
 .hetag_img_none {
     transition: all 0.5s linear;
-    opacity: 0;
+    background: rgba(255, 255, 0, 0);
 }
 
 .hetag_img_none_none {
@@ -140,19 +143,19 @@ html {
         right: 0px;
         width: 100%;
         /* min-width: 100%; */
-        max-width: 100%;
+        max-width: 100vw;
         /* object-fit: contain; */
     }
     
     .hetag_img {
-        /* scale: 0.5; */
-        /* object-fit: contain; */
-        width: 100%;
-        /* min-width: 100%; */
-        max-width: 100%;
         object-fit: cover;
+        /* height: inherit; */
         top: 0px;
         right: 0px;
+        width: 100%;
+        /* min-width: 100%; */
+        max-width: 100vw;
+        /* object-fit: contain; */
     }
 }
 
@@ -174,7 +177,12 @@ li {
     list-style-type: none;
 }
 
-
+.het_op {
+    user-select: none;
+    position: absolute;
+    z-index: -20;
+    opacity: 0;
+}
 
 
 /* ССЫЛКИ НА СОЦ СЕТИ */
@@ -969,8 +977,8 @@ li {
     font-size: 40px;
     position: absolute;
     top: -150px;
-    width: 100%;
-    /* width: 50%; */
+    /* width: 100%; */
+    width: 50%;
     color: var(--body-color);
     /* color: #393737; */
     align-items: center;
@@ -1053,7 +1061,7 @@ li {
 
 .main_afisha2 {
     grid-template-columns:repeat(2,  minmax(540px, 1fr));
-    grid-template-rows:repeat(2,  150px);
+    grid-template-rows:repeat(3,  150px);
     position: relative;
     /* width: 50%; */
     width: 100%;
@@ -1105,7 +1113,7 @@ li {
     }
 
     .main_afisha2 {
-        grid-template-rows: repeat(4, 150px);
+        grid-template-rows: repeat(5, 150px);
     }
 
 }
@@ -2633,12 +2641,12 @@ li {
     }
 }
 
-/* 
-@media (max-width:1490px) {
+@media (min-width:3000px) {
     .strange_btn_sec {
-        margin-right: 24%;
+        margin-right: 10%;
     }
 }
+/* 
 @media (max-width:1150px) {
     .strange_btn_sec {
         margin-right: 22%;
