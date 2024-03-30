@@ -79,9 +79,9 @@ document.getElementById("switchMode").onclick = function () {
 
 let img1 = document.querySelector("#img1");
 
-let New_photos_ALL = ["./img/oldmoney.jpg", "./img/oldmoney1.jpg", "./img/oldmoney2.jpg", "./img/oldmoney3.jpg","./img/oldmoney4.jpg", "./img/oldmoney5.jpg", "./img/oldmoney6.jpg", "./img/oldmoney7.jpg", "./img/oldmoney8.jpg", "./img/oldmoney_wt2.jpg", "./img/oldmoney_wt3.jpg"]
-let New_photos = ["./img/oldmoney.jpg", "./img/oldmoney1.jpg", "./img/oldmoney2.jpg", "./img/oldmoney3.jpg", "./img/oldmoney4.jpg", "./img/oldmoney5.jpg", "./img/oldmoney6.jpg", "./img/oldmoney7.jpg", "./img/oldmoney8.jpg"]
-let New_photos_WT = ["./img/oldmoney_wt2.jpg", "./img/oldmoney_wt3.jpg"]
+let New_photos_ALL = ["./img/oldmoney.jpeg", "./img/oldmoney1.jpeg", "./img/oldmoney2.jpeg", "./img/oldmoney3.jpeg","./img/oldmoney4.jpeg", "./img/oldmoney5.jpeg", "./img/oldmoney6.jpeg", "./img/oldmoney7.jpeg", "./img/oldmoney8.jpeg", "./img/oldmoney_wt2.jpeg", "./img/oldmoney_wt3.jpeg"]
+let New_photos = ["./img/oldmoney.jpeg", "./img/oldmoney1.jpeg", "./img/oldmoney2.jpeg", "./img/oldmoney3.jpeg", "./img/oldmoney4.jpeg", "./img/oldmoney5.jpeg", "./img/oldmoney6.jpeg", "./img/oldmoney7.jpeg", "./img/oldmoney8.jpeg"]
+let New_photos_WT = ["./img/oldmoney_wt2.jpeg", "./img/oldmoney_wt3.jpeg"]
 
 let het_1 = ["../img/hetag2.jpeg"]
 
@@ -96,10 +96,10 @@ function Random_min2() {
 }
 
 if (window.innerWidth <= 1300) {
-  img1.src = "../img/oldmoney.jpg" ;
+  img1.src = "../img/oldmoney.jpeg" ;
 }
 
-if (img1.src = "../img/oldmoney.jpg") {
+if (img1.src = "../img/oldmoney.jpeg") {
   setInterval(() => img1.src = New_photos_ALL[Math.floor(Math.random() * New_photos_ALL.length)], 3000);
 }
 

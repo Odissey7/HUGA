@@ -68,7 +68,7 @@ html {
 } */
 
 .hetag_img {
-    background: url("../img/hetag2.jpeg") no-repeat fixed top center;
+    /* background: url("../img/hetag2.jpeg") no-repeat fixed top center; */
     pointer-events: none;
     user-select: none;
     position: fixed;
@@ -278,10 +278,21 @@ li {
 }.menu li:hover .logo_logo{
     transition: all .4s linear;
     scale: 1.1;
-
+    
 }.logo_logo_ex {
     border-radius: 50%;}
+    
+    .logo_logo_sec {
+    transition: all .4s linear;
+    border-radius: 50%;
+    scale: 0.85;
+}
 
+.menu li:hover .logo_logo_sec {
+    transition: all .4s linear;
+    scale: 1;
+
+}
 
 @media (max-width:1040px) {
     .menu {
