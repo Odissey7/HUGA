@@ -68,7 +68,7 @@ html {
 } */
 
 .hetag_img {
-    /* background: url("../img/hetag2.jpeg") no-repeat fixed top center; */
+    background: url("../img/hetag2.jpeg") no-repeat fixed top center;
     pointer-events: none;
     user-select: none;
     position: fixed;
@@ -150,6 +150,7 @@ html {
     .hetag_img {
         object-fit: cover;
         /* height: inherit; */
+        /* height: 100%; */
         top: 0px;
         right: 0px;
         width: 100%;
@@ -193,6 +194,7 @@ li {
     top: -45px;
     right: 10%;
     border: none;
+    z-index: 9999;
     /* transform: rotate(16deg); */
 }
 
@@ -243,7 +245,7 @@ li {
     left:0;
     list-style:none;
     transition:0.5s;
-    transform:rotate(calc(-360deg/9 * var(--i)));
+    transform:rotate(calc(-290deg/7.5 * var(--i)));
     transform-origin:100px;
     scale:0;
     transition-delay: calc(0.05s * var(--i));
@@ -254,7 +256,7 @@ li {
 .menu li a{
     position:relative;
     display:flex;
-    transform:rotate(calc(360deg/9 * var(--i)));
+    transform:rotate(calc(290deg/7.5 * var(--i)));
     width:42px;
     height:42px;
     background-color:#FFF;
@@ -297,17 +299,20 @@ li {
 @media (max-width:1040px) {
     .menu {
         transform: scale(-1, 1);
+        rotate: -16deg;
     }
-
+    
     /* .toggle_sec {
         transform: scale(-1, 1);
     } */
-
+    
     .toggle_text {
+        rotate: -16deg;
         transform: scale(-1, 1);
     }
     
     .logo_logo{
+        rotate: -22deg;
         transform: scale(-1, 1);
     }
     
@@ -316,7 +321,7 @@ li {
         position: fixed;
         top: -25px;
         width: 16%;
-        left: 30px;
+        left: 40px;
     }
 }
 
@@ -567,6 +572,7 @@ li {
     background-color: #000;
     animation: merchModil 3s linear infinite;
 }
+
 
 .popup_wrapper-item:hover {
     animation-play-state: paused;
@@ -1047,7 +1053,7 @@ li {
         display: grid;
         grid-template-columns: 1fr;
         /* grid-template-rows: repeat(2, 1fr); */
-        row-gap: 200px;
+        row-gap: 100px;
         justify-items: center;
         align-items: baseline;
     }
@@ -1056,7 +1062,7 @@ li {
         display: grid;
         row-gap: 30px;
         grid-template-columns:repeat(2,  minmax(540px, 1fr));
-        grid-template-rows: repeat(1, 150px);
+        grid-template-rows: repeat(3, 150px);
     }
     /*     
     .main_afisha_3 {
@@ -1072,7 +1078,7 @@ li {
 
 .main_afisha2 {
     grid-template-columns:repeat(2,  minmax(540px, 1fr));
-    grid-template-rows:repeat(3,  150px);
+    grid-template-rows:repeat(2,  150px);
     position: relative;
     /* width: 50%; */
     width: 100%;
@@ -1113,7 +1119,7 @@ li {
     .main_afisha {
         display: grid;
         grid-template-columns:repeat(1,  minmax(540px, 1fr));
-        grid-template-rows: repeat(3, 150px);
+        grid-template-rows: repeat(6, 150px);
 
         width: 100%;
     }
@@ -1124,7 +1130,7 @@ li {
     }
 
     .main_afisha2 {
-        grid-template-rows: repeat(5, 150px);
+        grid-template-rows: repeat(4, 150px);
     }
 
 }
@@ -1142,6 +1148,11 @@ li {
 .standUp_start {
     font-size: 22px;
     white-space: nowrap;
+}
+
+.standUp_start_sec {
+    font-size: 20px;
+    scale: 0.95;
 }
 
 .pClass {
@@ -1454,7 +1465,7 @@ li {
     position: relative;
     z-index: 10;
     width: 100%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 .title_list {
@@ -2103,12 +2114,14 @@ li {
 }
 
 .img_merch {
+    fill: #fff;
     width: 25px;
 }
 
+
 .img_merch_sec {
     transition: all 0.5s linear;
-    fill: #fff;
+    fill: #000;
     width: 25px;
 }
 
@@ -2461,9 +2474,20 @@ li {
 }
 
 .anonse_team_sec {
+    display: flex;
     justify-content: center;
     column-gap: 10px;
     transition: all 0.5s linear;
+}
+
+.anonse_team_sec span {
+    transition: all 0.5s linear;
+    color: #000;
+}
+
+.anonse_team_sec_active span {
+    transition: all 0.5s linear;
+    color: #fff;
 }
 
 .anonse_team_sec_active {
@@ -2627,7 +2651,7 @@ li {
 .strange_btn_sec {
     max-width: 2000px;
     position: relative;
-    z-index: 9999;
+    z-index: 9990;
     cursor: pointer;
     margin-right: 25%;
     top: 30px;
